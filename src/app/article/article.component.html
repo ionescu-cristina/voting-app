@@ -1,32 +1,29 @@
-<hr/>
-<div class="">
-  <div class="">
-    <div class="value">
-      {{ article.votes }}
+<div class="w-screen h-screen grid grid-cols-2 items-center justify-items-center">
+
+  <div class="text-center">
+    <img src="{{ article.link }}" class="object-fill w-4/5 mb-5">
+    ({{article.domain()}})
+  </div>
+
+  <div>
+    <div class="text-center text-7xl rounded-full bg-indigo-700  text-white p-5">
+      {{ article.votes }} Points
     </div>
-    <div class="label">
-      Points
-    </div>
+
+    <ul class="vote flex">
+      <li class="m-7">
+        <a href (click)="voteUp()"  class="shadow-2xl bg-indigo-700  text-white p-5">
+          <i class="arrow up icon"></i>
+          up vote
+        </a>
+      </li>
+      <li class="m-7">
+        <a href (click)="voteDown()" class="shadow-2xl bg-indigo-700  text-white p-5">
+          down vote
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
-<div class="">
-  <a class="" href="{{ article.link }}">
-    {{ article.title }}
-  </a>
-  <div class="meta">({{article.domain()}})</div>
-  <ul class="">
-    <li class="item">
-      <a href (click)="voteUp()">
-        <i class="arrow up icon"></i>
-        upvote
-      </a>
-    </li>
-    <li class="item">
-      <a href (click)="voteDown()">
-        <i class="arrow down icon"></i>
-        downvote
-      </a>
-    </li>
-  </ul>
-</div>
+
 
