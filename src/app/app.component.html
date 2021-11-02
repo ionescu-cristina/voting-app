@@ -1,19 +1,35 @@
-<form class="">
-  <h3 class="header">Add a Link</h3>
-  <div class="field">
-    <label for="title">Title:</label>
-    <input name="title" id="title" #newtitle>
+<div class="flex h-screen">
+  <div class="m-auto bg-indigo-700 rounded p-8 text-white text-center">
+    <h1 class="font-mono">Vote and choose your favorite photos from the photo contests</h1>
   </div>
-  <div class="field">
-    <label for="link">Link:</label>
-    <input name="link" id="link" #newlink>
-  </div>
-  <button (click)="addArticle(newtitle, newlink)"
-          class="">Submit link
-  </button>
-</form>
-
-<div>
-  <app-article *ngFor="let article of sortedArticles()"
-               [article] = "article"></app-article>
 </div>
+
+<div class="h-screen bg-indigo-100 flex overflow-x-auto">
+  <app-article *ngFor="let article of sortedArticles()"
+               [article]="article"></app-article>
+</div>
+
+<div class="flex h-screen bg-indigo-700">
+  <div class="m-auto bg-indigo-100 rounded p-5">
+    <img class="w-20 mx-auto mb-5" src=""/>
+
+    <form class="">
+      <div class="field">
+        <label for="title" class="block mb-2 text-indigo-500">Add title:</label>
+        <input name="title" id="title" #newtitle
+               class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300">
+      </div>
+      <div class="field">
+        <label for="link" class="block mb-2 text-indigo-500">Add a link:</label>
+        <input name="link" id="link" #newlink
+               class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300">
+      </div>
+      <button (click)="addArticle(newtitle, newlink)"
+              class="w-full bg-indigo-700 hover:bg-purple-600 bg-opacity-100 text-white font-bold py-2 px-4 mb-6 rounded">
+        Submit link
+      </button>
+    </form>
+  </div>
+</div>
+
+
