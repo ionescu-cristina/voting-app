@@ -1,29 +1,28 @@
-<div class="w-screen h-screen grid grid-cols-2 items-center justify-items-center">
+<div class="my-5">
 
-  <div class="text-center">
-    <img src="{{ article.link }}" class="object-fill w-4/5 mb-5">
-    ({{article.domain()}})
+  <div class="grid grid-cols-1 place-items-center">
+    <img src="{{ article.link }}" class="w-full">
+    <span class="mt-5"> ({{article.domain()}})</span>
   </div>
 
-  <div>
-    <div class="text-center text-7xl rounded-full bg-indigo-700  text-white p-5">
-      {{ article.votes }} Points
-    </div>
-
-    <ul class="vote flex">
-      <li class="m-7">
-        <a href (click)="voteUp()"  class="shadow-2xl bg-indigo-700  text-white p-5">
-          <i class="arrow up icon"></i>
+  <div class="grid grid-cols-1  md:grid-cols-2 place-items-center">
+    <ul class="vote">
+      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-5 text-center">
+        <a href (click)="voteUp()">
           up vote
         </a>
       </li>
-      <li class="m-7">
-        <a href (click)="voteDown()" class="shadow-2xl bg-indigo-700  text-white p-5">
+      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-5 text-center">
+        <a href (click)="voteDown()">
           down vote
         </a>
       </li>
     </ul>
+    <div class="text-center text-3xl bg-indigo-700  text-white rounded p-5 text-center">
+      {{ article.votes }} Points
+    </div>
   </div>
+
 </div>
 
 
