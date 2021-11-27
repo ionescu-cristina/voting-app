@@ -7,18 +7,18 @@
 
   <div class="grid grid-cols-1  md:grid-cols-2 place-items-center">
     <ul class="vote">
-      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-5 text-center">
+      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-1 text-center">
         <a href (click)="voteUp()">
           up vote
         </a>
       </li>
-      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-5 text-center">
+      <li class="shadow-2xl bg-indigo-700  text-white mb-5 p-1 text-center">
         <a href (click)="voteDown()">
           down vote
         </a>
       </li>
     </ul>
-    <div class="text-center text-3xl bg-indigo-700  text-white rounded p-5 text-center">
+    <div class="text-center  bg-indigo-700  text-white rounded p-1 text-center">
       {{ article.votes }} Points
     </div>
   </div>
